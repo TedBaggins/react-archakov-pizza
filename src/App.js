@@ -2,13 +2,16 @@ import React from "react";
 import {Header, Categories} from "./components";
 
 function App() {
-  return (
+
+
+
+    return (
       <div className="wrapper">
           <Header/>
           <div className="content">
               <div className="container">
                   <div className="content__top">
-                      <Categories items={['Все', 'Мясные', 'Вегетарианская', 'Гриль', 'Острые', 'Закрытые']}/>
+                      <Categories onClickItem={(item) => console.log(item)} items={['Мясные', 'Вегетарианская', 'Гриль', 'Острые', 'Закрытые']}/>
                       <div className="sort">
                           <div className="sort__label">
                               <svg
@@ -383,7 +386,7 @@ function App() {
               </div>
           </div>
       </div>
-  );
+    );
 }
 
 export default App;
